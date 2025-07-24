@@ -8,3 +8,65 @@
 
 </body>
 </html>
+
+
+// Array
+
+//let number=[1,2,"Three",true];
+//let names=Array("Lilly","Rosemin");
+//console.log(number[2]);
+//console.log(names.length);
+
+// Filter()-it filtered the result arguments
+
+//let result=number.filter(number=>number[1]);
+//console.log(result);
+
+// Slice-delete the element based on index value
+
+//let number=[1,2,3,4,5];
+//number.splice(1,2,"Hey");
+//console.log(number)
+
+// object
+
+//let details={
+//   name:"Lilly",
+//    totalmark:"32",
+//    // nested obj
+//    subject:{
+//        dbms:45,
+//        java:43,
+//  },
+//    avg:function(){
+//        let sum=parseInt(this.subject.dbms+this.subject.java);
+//        return sum;
+//    }
+//}
+//console.log(details.totalmark)
+//console.log(details["name"]);
+//console.log(details.subject.dbms);
+//console.log(details.subject["java"]);
+//console.log(details.avg());
+    
+/*
+const person={
+    name:"Vinma",
+    age: 18,
+    city: "Chennai"
+};
+
+// Destructuring
+
+const {name,age,city}=person;
+
+console.log(name);
+console.log(age);
+console.log(city);
+*/
+
+// Array Destructuring
+
+const person=["Harly",24,"Web Developer"];
+const[name,age,designation]=person;
+console.log(name+" "+age+" "+designation);
