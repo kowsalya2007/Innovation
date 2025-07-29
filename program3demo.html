@@ -8,3 +8,18 @@
     
 </body>
 </html>
+
+
+let enter = 1234567899
+let number=/^[1-9]\d{9}$/;
+if(number.test(enter.toString())){
+    console.log("correct")
+}
+else{
+    console.log("Wrong")
+}
+
+
+const text="Hai Hello how are you";
+const words=text.match(/\bh\w+w\b/gi);
+console.log(words.length);
