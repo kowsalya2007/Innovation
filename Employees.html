@@ -8,3 +8,54 @@
     
 </body>
 </html>
+
+
+
+let employees=[];
+
+// add Employee
+
+function addEmp(id,name,salary = true){
+    employees.push({id,name,salary});
+    console.log("Employees Added",employees);
+}
+addEmp(1,"lilly",200000)
+addEmp(2,"vinma",300000)
+addEmp(3,"moni",500000)
+
+// update Employee
+
+function updateEmp(id,newDetail){
+    const emp=employees.find(e => e.id === id)
+    if(emp){
+        Object.assign(emp,newDetail);
+        console.log("Updated",employees);
+    }
+    else{
+        console.log("Employee Not Found!");
+    }
+}
+updateEmp(3, {salary:350000});
+
+// Remove Employee
+
+function removeEmp(id){
+    const index=employees.findIndex(e =>e.id === id)
+    if(index !== -1){
+        employees.splice(index,id)
+        console.log("Employee Removed",);
+    }
+    else{
+        console.log("Employee Not Found!");
+    }
+
+}
+removeEmp(1)
+
+// Calculate Total Salary
+
+function totalSalary(){
+    const total=employees.reduce((sum,emp)=>sum+emp.salary,0);
+    console.log("Total Salary is",total);
+}
+totalSalary()
